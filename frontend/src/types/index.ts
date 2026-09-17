@@ -9,6 +9,7 @@ export interface Project {
   category?: 'code' | 'design';
   role?: string;
   image?: string;
+  images?: string[];
   caseStudyUrl?: string;
   buttonText?: string;
 }

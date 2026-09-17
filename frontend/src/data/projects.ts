@@ -51,7 +51,13 @@ export const projectsData: Project[] = [
     ],
     caseStudyUrl: 'https://lnkd.in/p/gHGSuqmd?utm_source=chatgpt.com',
     buttonText: 'View Case Study',
-    image: '/assets/goodreads-mockup.png',
+    image: '/assets/goodreads-1.png',
+    images: [
+      '/assets/goodreads-1.png',
+      '/assets/goodreads-2.png',
+      '/assets/goodreads-3.png',
+      '/assets/goodreads-4.png',
+    ],
   },
   {
     id: 'recruitsphere-ai',

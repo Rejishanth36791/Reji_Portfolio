@@ -5,7 +5,12 @@ export interface Project {
   bannerTag: string;
   features: string[];
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
+  category?: 'code' | 'design';
+  role?: string;
+  image?: string;
+  caseStudyUrl?: string;
+  buttonText?: string;
 }
 
 export interface SkillCategory {

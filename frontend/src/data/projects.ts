@@ -2,6 +2,32 @@ import type { Project } from '../types';
 
 export const projectsData: Project[] = [
   {
+    id: 'travel-to-heaven',
+    title: 'Travel to Heaven',
+    bannerTag: 'FULL-STACK · TRAVEL PLATFORM',
+    category: 'code',
+    role: 'Full-Stack Developer (React + Spring Boot)',
+    description:
+      'A modern travel discovery and trip-planning platform enabling users to explore breathtaking destinations, plan day-by-day itineraries, track budgets, and share travel stories.',
+    features: [
+      'Destination Discovery & Interactive Map',
+      'Trip Creation & Itinerary Planning',
+      'Budget & Multi-Currency Tracking',
+      'JWT Auth & Admin Moderation',
+    ],
+    technologies: [
+      'React',
+      'TypeScript',
+      'Spring Boot',
+      'PostgreSQL',
+      'Spring Security',
+      'Tailwind CSS',
+      'JPA / Hibernate',
+    ],
+    githubUrl: 'https://github.com/rejishanth',
+    image: '/assets/travel-to-heaven.png',
+  },
+  {
     id: 'goodreads-redesign',
     title: 'Goodreads Mobile App Redesign',
     bannerTag: 'UI/UX DESIGN · HCI · FIGMA',
@@ -58,17 +84,6 @@ export const projectsData: Project[] = [
       'Backend system for academic records management, offering RESTful endpoints and secure data processing.',
     features: ['REST APIs', 'Student Records'],
     technologies: ['Spring Boot', 'MySQL'],
-    githubUrl: 'https://github.com/rejishanth',
-  },
-  {
-    id: 'jenu-fashion',
-    title: 'Jenu Fashion Shop',
-    bannerTag: 'E-COMMERCE',
-    category: 'code',
-    description:
-      'Online fashion catalog and shopping cart system with admin inventory controls.',
-    features: ['Product Catalog', 'Cart Management'],
-    technologies: ['PHP', 'MySQL'],
     githubUrl: 'https://github.com/rejishanth',
   },
 ];

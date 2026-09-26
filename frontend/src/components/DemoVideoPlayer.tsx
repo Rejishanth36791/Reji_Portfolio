@@ -131,15 +131,6 @@ export const DemoVideoPlayer: React.FC = () => {
 
         <div className="video-viewport-overlay" />
 
-        {/* Top Header Overlay Bar */}
-        <div className="video-header-bar">
-          <span className="video-badge">{currentScene.badge}</span>
-          <span className="video-hd-tag">
-            <span className="hd-live-dot"></span>
-            1080p 60FPS DEMO REEL
-          </span>
-        </div>
-
         {/* Scene Text & Title Animation */}
         <div className="video-scene-content">
           <div className="video-title-box" key={currentScene.id}>
@@ -154,12 +145,6 @@ export const DemoVideoPlayer: React.FC = () => {
             <i className="fa-solid fa-play"></i>
           </button>
         )}
-
-        {/* Closed Captions Bar */}
-        <div className="video-captions-bar">
-          <span className="cc-label">CC</span>
-          <span className="cc-text">{currentScene.caption}</span>
-        </div>
       </div>
 
       {/* Video Player Controls Bar */}

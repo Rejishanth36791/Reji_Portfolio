@@ -16,7 +16,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenDemoModal, activeSection }) =>
       {/* Left Hero Typography & Actions */}
       <div className="hero-left">
         <div className="hero-eyebrow">
-          <span>FULL-STACK SOFTWARE ENGINEER</span>
+          <span>Undergraduate at NSBM Green University</span>
         </div>
 
         <div className="title-container">

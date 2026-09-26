@@ -12,6 +12,8 @@ export interface Project {
   images?: string[];
   caseStudyUrl?: string;
   buttonText?: string;
+  isWorkInProgress?: boolean;
+  inProgressMessage?: string;
 }
 
 export interface SkillCategory {

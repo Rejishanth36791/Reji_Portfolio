@@ -27,6 +27,18 @@ export const About: React.FC = () => {
                 <div className="stat-lbl">TECH STACK</div>
               </div>
             </div>
+            <div style={{ marginTop: '28px' }}>
+              <a
+                href="/Rejishanth_CV.pdf"
+                download="Rejishanth_CV.pdf"
+                className="cv-download-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-file-arrow-down"></i>
+                <span>DOWNLOAD FULL CV</span>
+              </a>
+            </div>
           </div>
 
           <GlassCard>

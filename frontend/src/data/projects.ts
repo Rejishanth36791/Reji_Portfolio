@@ -24,7 +24,7 @@ export const projectsData: Project[] = [
       'Tailwind CSS',
       'JPA / Hibernate',
     ],
-    githubUrl: 'https://github.com/rejishanth',
+    githubUrl: 'https://github.com/Rejishanth36791/Travel_Website.git',
     image: '/assets/travel-to-heaven.png',
   },
   {
@@ -68,7 +68,8 @@ export const projectsData: Project[] = [
       'AI-driven recruitment platform connecting recruiters with top candidates through intelligent resume parsing and role matching.',
     features: ['AI Resume Analysis', 'Candidate Matching', 'Interview Scheduling'],
     technologies: ['React', 'TypeScript', 'ASP.NET Core 8'],
-    githubUrl: 'https://github.com/rejishanth',
+    githubUrl: 'https://github.com/Rejishanth36791/RecruitShpereAI.git',
+    image: '/assets/recruitsphere-ai.jpg',
   },
   {
     id: 'findmymeds',
@@ -79,17 +80,21 @@ export const projectsData: Project[] = [
       'Pharmacy inventory tracking and medicine search platform enabling users to locate and reserve essential prescriptions quickly.',
     features: ['Inventory Reservation', 'Medicine Search'],
     technologies: ['React', 'Spring Boot', 'MySQL'],
-    githubUrl: 'https://github.com/rejishanth',
+    githubUrl: 'https://github.com/Rejishanth36791/Find_Med.git',
+    image: '/assets/findmymeds.jpg',
   },
   {
     id: 'student-management',
     title: 'Student Management System',
-    bannerTag: 'EDUCATION',
+    bannerTag: 'EDUCATION · IN PROGRESS',
     category: 'code',
     description:
       'Backend system for academic records management, offering RESTful endpoints and secure data processing.',
     features: ['REST APIs', 'Student Records'],
     technologies: ['Spring Boot', 'MySQL'],
-    githubUrl: 'https://github.com/rejishanth',
+    githubUrl: '#',
+    image: '/assets/student-management.jpg',
+    isWorkInProgress: true,
+    inProgressMessage: 'Currently working project — Repository will be updated soon!',
   },
 ];

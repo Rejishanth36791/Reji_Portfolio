@@ -11,6 +11,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const imageList = project.images || (project.image ? [project.image] : []);
   const [activeImgIdx, setActiveImgIdx] = React.useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = React.useState(false);
+  const [showWipToast, setShowWipToast] = React.useState(false);
 
   const currentImage = imageList[activeImgIdx] || project.image;
 
@@ -22,6 +23,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const handleNextImg = (e: React.MouseEvent) => {
     e.stopPropagation();
     setActiveImgIdx((prev) => (prev === imageList.length - 1 ? 0 : prev + 1));
+  };
+
+  const handleSourceCodeClick = (e: React.MouseEvent) => {
+    if (project.isWorkInProgress) {
+      e.preventDefault();
+      setShowWipToast(true);
+      setTimeout(() => {
+        setShowWipToast(false);
+      }, 5000);
+    }
   };
 
   return (
@@ -124,11 +135,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
-                target="_blank"
+                target={project.isWorkInProgress ? '_self' : '_blank'}
                 rel="noopener noreferrer"
-                className="project-btn secondary-link"
+                className={`project-btn secondary-link ${project.isWorkInProgress ? 'wip-link' : ''}`}
+                onClick={handleSourceCodeClick}
               >
-                <i className="fa-brands fa-github"></i> Source Code
+                <i className={`fa-solid ${project.isWorkInProgress ? 'fa-clock-rotate-left' : 'fa-code-branch'}`}></i>{' '}
+                {project.isWorkInProgress ? 'Source Code (Updating Soon)' : 'Source Code'}
               </a>
             )}
           </div>
@@ -191,6 +204,27 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               </div>
             )}
           </div>
+        </div>
+      )}
+
+      {/* Work In Progress Toast Alert */}
+      {showWipToast && (
+        <div className="wip-toast">
+          <div className="wip-toast-icon">
+            <i className="fa-solid fa-code-commit"></i>
+          </div>
+          <div className="wip-toast-content">
+            <strong>Work In Progress</strong>
+            <p>{project.inProgressMessage || 'Currently working project — Repository will be updated soon!'}</p>
+          </div>
+          <button
+            type="button"
+            className="wip-toast-close"
+            onClick={() => setShowWipToast(false)}
+            aria-label="Close notification"
+          >
+            &times;
+          </button>
         </div>
       )}
     </>

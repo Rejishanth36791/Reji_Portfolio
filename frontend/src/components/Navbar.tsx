@@ -61,6 +61,17 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme, activeSect
 
         <div className="nav-socials">
           <a
+            href="/Rejishanth_CV.pdf"
+            download="Rejishanth_CV.pdf"
+            className="nav-cv-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download CV"
+          >
+            <i className="fa-solid fa-download"></i>
+            <span>CV</span>
+          </a>
+          <a
             href="https://www.linkedin.com/in/rejishanth-pushpenthira-095047376/"
             target="_blank"
             rel="noopener noreferrer"

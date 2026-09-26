@@ -21,7 +21,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenDemoModal, activeSection }) =>
 
         <div className="title-container">
           <h1 className="hero-title-main">
-            <span className="title-logo-box">R</span>REJISHANTH
+            <span className="title-name-group">
+              <span className="title-logo-box">R</span>
+              <span className="title-name-text">REJISHANTH</span>
+            </span>
             <span className="hero-title-sub">S.E.</span>
           </h1>
         </div>
@@ -38,6 +41,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenDemoModal, activeSection }) =>
 
         {/* CTA Buttons */}
         <div className="hero-cta">
+          <a
+            href="/Rejishanth_CV.pdf"
+            download="Rejishanth_CV.pdf"
+            className="cv-download-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa-solid fa-file-arrow-down"></i>
+            <span>DOWNLOAD CV</span>
+          </a>
           <button className="watch-trailer-btn" onClick={onOpenDemoModal} type="button">
             <div className="play-circle">
               <i className="fa-solid fa-play"></i>

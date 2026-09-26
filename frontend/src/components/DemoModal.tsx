@@ -1,4 +1,5 @@
 import React from 'react';
+import { DemoVideoPlayer } from './DemoVideoPlayer';
 
 interface DemoModalProps {
   isOpen: boolean;
@@ -18,37 +19,30 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose }) => {
       onClick={handleBackdropClick}
       id="demoModal"
     >
-      <div className="modal-box">
+      <div className="modal-box demo-modal-box">
         <button className="modal-close" onClick={onClose} aria-label="Close Demo Modal">
           &times;
         </button>
-        <div className="section-eyebrow">PORTFOLIO DEMO REEL</div>
+        <div className="section-eyebrow">30-SECOND PORTFOLIO DEMO REEL</div>
         <h3
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: '26px',
+            fontSize: '24px',
             color: 'var(--text-title)',
             marginBottom: '16px',
           }}
         >
-          Rejishanth — Software Engineering Showcase
+          Rejishanth — Services &amp; Projects Showcase
         </h3>
-        <div className="modal-video-placeholder">
-          <div className="play-circle" style={{ width: '70px', height: '70px', fontSize: '24px' }}>
-            <i className="fa-solid fa-play"></i>
-          </div>
-          <span
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: '13px',
-              color: 'var(--accent-cyan)',
-              letterSpacing: '0.15em',
-            }}
-          >
-            FEATURED PROJECT SHOWCASE (RECRUITSPHERE AI &amp; FINDMYMEDS)
+
+        {/* 30-Second Demo Video Player */}
+        <DemoVideoPlayer />
+
+        <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--text-muted)' }}>
+            <i className="fa-solid fa-sparkles" style={{ color: 'var(--accent-cyan)', marginRight: '6px' }}></i>
+            30 Sec High-Definition Demo Reel
           </span>
-        </div>
-        <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'flex-end', gap: '14px' }}>
           <a href="#projects" className="btn-primary" onClick={onClose}>
             EXPLORE ALL PROJECTS
           </a>

@@ -57,6 +57,42 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme, activeSect
               {link.name}
             </a>
           ))}
+          <div className="mobile-menu-actions">
+            <a
+              href="/Rejishanth_CV.pdf"
+              download="Rejishanth_CV.pdf"
+              className="cv-download-btn mobile-cv-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleLinkClick}
+            >
+              <i className="fa-solid fa-file-arrow-down"></i>
+              <span>DOWNLOAD CV</span>
+            </a>
+            <div className="mobile-social-icons">
+              <a
+                href="https://www.linkedin.com/in/rejishanth-pushpenthira-095047376/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+                aria-label="LinkedIn"
+              >
+                <i className="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/Rejishanth36791"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+                aria-label="GitHub"
+              >
+                <i className="fa-brands fa-github"></i>
+              </a>
+              <a href="mailto:rejishanth422@gmail.com" className="social-icon" aria-label="Email">
+                <i className="fa-regular fa-envelope"></i>
+              </a>
+            </div>
+          </div>
         </nav>
 
         <div className="nav-socials">
@@ -75,7 +111,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme, activeSect
             href="https://www.linkedin.com/in/rejishanth-pushpenthira-095047376/"
             target="_blank"
             rel="noopener noreferrer"
-            className="social-icon"
+            className="social-icon desk-social"
             aria-label="LinkedIn"
           >
             <i className="fa-brands fa-linkedin-in"></i>
@@ -84,12 +120,12 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme, activeSect
             href="https://github.com/Rejishanth36791"
             target="_blank"
             rel="noopener noreferrer"
-            className="social-icon"
+            className="social-icon desk-social"
             aria-label="GitHub"
           >
             <i className="fa-brands fa-github"></i>
           </a>
-          <a href="mailto:rejishanth422@example.com" className="social-icon" aria-label="Email">
+          <a href="mailto:rejishanth422@gmail.com" className="social-icon desk-social" aria-label="Email">
             <i className="fa-regular fa-envelope"></i>
           </a>
 

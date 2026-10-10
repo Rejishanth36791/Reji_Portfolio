@@ -13,11 +13,22 @@ export async function sendEmailMessage(formData: ContactFormData): Promise<void>
     throw new Error('Contact form is temporarily unavailable. Please try again later.');
   }
 
+  const subjectValue = formData.subject?.trim() || 'Portfolio Inquiry';
+
   const templateParams = {
+    // Standard parameters
     name: formData.name,
     email: formData.email,
-    subject: formData.subject || '',
+    subject: subjectValue,
     message: formData.message,
+
+    // Common EmailJS default template variable aliases
+    from_name: formData.name,
+    from_email: formData.email,
+    reply_to: formData.email,
+    email_subject: subjectValue,
+    title: subjectValue,
+    user_subject: subjectValue,
   };
 
   await emailjs.send(serviceId, templateId, templateParams, publicKey);
